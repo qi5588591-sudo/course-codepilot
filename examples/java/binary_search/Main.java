@@ -1,0 +1,1 @@
+class Main { static int f(int[] a,int t){int l=0,r=a.length-1;while(l<=r){int m=(l+r)/2;if(a[m]==t)return m;if(a[m]<t)l=m+1;else r=m-1;}return -1;} public static void main(String[] args){if(f(new int[]{1,3,5},5)!=2||f(new int[]{},1)!=-1||f(new int[]{1},1)!=0)throw new AssertionError();}}

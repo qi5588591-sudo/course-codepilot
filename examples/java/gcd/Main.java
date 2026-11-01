@@ -1,0 +1,1 @@
+class Main { static int f(int a,int b){a=Math.abs(a);b=Math.abs(b);while(b!=0){int c=a%b;a=b;b=c;}return a;} public static void main(String[] args){if(f(-12,18)!=6||f(0,0)!=0||f(7,0)!=7)throw new AssertionError();}}

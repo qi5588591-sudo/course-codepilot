@@ -1,0 +1,42 @@
+name: Core checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Python dependencies
+        run: python -m pip install -r requirements.lock.txt
+      - name: Backend and fixed dataset checks (no live API)
+        run: |
+          New-Item -ItemType Directory -Force artifacts | Out-Null
+          python -m pytest -q --junitxml=artifacts/backend-tests.xml
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '11.25.0'
+      - name: Install extension dependencies
+        working-directory: extension
+        run: pnpm install --frozen-lockfile
+      - name: Compile and check extension
+        working-directory: extension
+        run: |
+          pnpm run compile
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          pnpm test
+      - name: Package VSIX
+        run: node scripts/package-extension.cjs

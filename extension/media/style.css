@@ -1,0 +1,16 @@
+:root { color-scheme: light dark; }
+body { padding: 20px 18px 32px; font-family: var(--vscode-font-family); color: var(--vscode-foreground); }
+header { margin-bottom: 22px; } h1 { margin: 5px 0; font-size: 28px; letter-spacing: -1px; } h2 { font-size: 14px; }
+.eyebrow { letter-spacing: 2px; font-size: 10px; color: var(--vscode-descriptionForeground); } p { line-height: 1.6; }
+label { display: block; margin: 16px 0 7px; font-weight: 600; } textarea, select { width: 100%; box-sizing: border-box; padding: 9px; border: 1px solid var(--vscode-input-border, #6666); border-radius: 4px; background: var(--vscode-input-background); color: var(--vscode-input-foreground); font: inherit; }
+textarea { resize: vertical; line-height: 1.6; } textarea:focus, select:focus, button:focus { outline: 1px solid var(--vscode-focusBorder); outline-offset: 2px; }
+button { padding: 8px 12px; border: 0; border-radius: 4px; background: var(--vscode-button-background); color: var(--vscode-button-foreground); cursor: pointer; font: inherit; }
+button.secondary { background: var(--vscode-button-secondaryBackground); color: var(--vscode-button-secondaryForeground); } button:disabled { opacity: .45; cursor: default; }
+.actions { display: flex; gap: 8px; margin: 14px 0; } .wrap { flex-wrap: wrap; } details { margin-top: 18px; } summary { cursor: pointer; padding: 5px 0; }
+.check { font-weight: 400; display: flex; align-items: center; gap: 6px; } .hint { color: var(--vscode-descriptionForeground); font-size: 11px; }
+#health, #status { padding: 10px 0; font-size: 12px; } #status { white-space: pre-wrap; } #contextCount { margin-left: 8px; font-size: 11px; }
+section { border-top: 1px solid var(--vscode-panel-border, #6666); margin-top: 22px; padding-top: 10px; } .sectionHeading { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+#verification { font-size: 11px; color: var(--vscode-descriptionForeground); } pre { font-family: var(--vscode-editor-font-family, monospace); font-size: 12px; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.65; max-height: 480px; overflow: auto; }
+#code { background: var(--vscode-textCodeBlock-background); padding: 12px; border-radius: 4px; } #explanation:empty, #code:empty { display: none; }
+.historyItem { display: block; width: 100%; text-align: left; margin: 7px 0; background: var(--vscode-button-secondaryBackground); color: var(--vscode-button-secondaryForeground); }
+.error { color: var(--vscode-errorForeground); }

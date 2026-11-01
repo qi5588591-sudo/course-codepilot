@@ -1,0 +1,9 @@
+src/**
+test/**
+node_modules/**
+tsconfig.json
+pnpm-lock.yaml
+.vscode/**
+out/**/*.map
+out/hostTest.js
+pnpm-workspace.yaml

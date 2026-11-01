@@ -1,0 +1,13 @@
+{
+  "passed": 6,
+  "model": "mock local HTTP provider",
+  "native_vscode": true,
+  "scenarios": [
+    "generation context",
+    "diff preview",
+    "apply insertion",
+    "stale source protection",
+    "unavailable verification",
+    "request cancellation"
+  ]
+}

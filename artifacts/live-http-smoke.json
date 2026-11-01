@@ -1,0 +1,19 @@
+{
+  "health": {
+    "status": "ok",
+    "model_configured": false,
+    "model": "",
+    "version": "0.1.0",
+    "execution": "docker-only"
+  },
+  "docs_http": 200,
+  "openapi_http": 200,
+  "unconfigured_task_http": 503,
+  "verification": {
+    "status": "unavailable",
+    "output": "未找到 Docker。请安装 Docker Desktop 并构建 sandbox 镜像。代码未执行。",
+    "exit_code": null,
+    "duration_ms": 9,
+    "tests_sha256": "7eece8074a34fe51320f5268f1e9882e9a887b56a8f3bf833d18292ecef5718d"
+  }
+}

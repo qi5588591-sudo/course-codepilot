@@ -1,0 +1,11 @@
+{
+  "passed": 5,
+  "checks": [
+    "request payload",
+    "model text escaping",
+    "stale apply button",
+    "history text escaping",
+    "history action"
+  ],
+  "model": "simulated browser messages"
+}

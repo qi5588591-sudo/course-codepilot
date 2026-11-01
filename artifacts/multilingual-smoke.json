@@ -1,0 +1,146 @@
+[
+  {
+    "language": "javascript",
+    "case": "binary_search",
+    "type": "trusted_reference_smoke",
+    "status": "passed",
+    "commands": [
+      [
+        "node",
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-wtgt1f_a\\main.js"
+      ]
+    ]
+  },
+  {
+    "language": "javascript",
+    "case": "gcd",
+    "type": "trusted_reference_smoke",
+    "status": "passed",
+    "commands": [
+      [
+        "node",
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-tw19wm7n\\main.js"
+      ]
+    ]
+  },
+  {
+    "language": "javascript",
+    "case": "palindrome",
+    "type": "trusted_reference_smoke",
+    "status": "passed",
+    "commands": [
+      [
+        "node",
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-lndcl7xm\\main.js"
+      ]
+    ]
+  },
+  {
+    "language": "java",
+    "case": "binary_search",
+    "type": "trusted_reference_smoke",
+    "status": "passed",
+    "commands": [
+      [
+        "javac",
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-9sdl1keu\\Main.java"
+      ],
+      [
+        "java",
+        "-cp",
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-9sdl1keu",
+        "Main"
+      ]
+    ]
+  },
+  {
+    "language": "java",
+    "case": "gcd",
+    "type": "trusted_reference_smoke",
+    "status": "passed",
+    "commands": [
+      [
+        "javac",
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-__0fvckw\\Main.java"
+      ],
+      [
+        "java",
+        "-cp",
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-__0fvckw",
+        "Main"
+      ]
+    ]
+  },
+  {
+    "language": "java",
+    "case": "palindrome",
+    "type": "trusted_reference_smoke",
+    "status": "passed",
+    "commands": [
+      [
+        "javac",
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-2tfxgrif\\Main.java"
+      ],
+      [
+        "java",
+        "-cp",
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-2tfxgrif",
+        "Main"
+      ]
+    ]
+  },
+  {
+    "language": "cpp",
+    "case": "binary_search",
+    "type": "trusted_reference_smoke",
+    "status": "passed",
+    "commands": [
+      [
+        "g++",
+        "-std=c++17",
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-hw9jsq7e\\main.cpp",
+        "-o",
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-hw9jsq7e\\main.exe"
+      ],
+      [
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-hw9jsq7e\\main.exe"
+      ]
+    ]
+  },
+  {
+    "language": "cpp",
+    "case": "gcd",
+    "type": "trusted_reference_smoke",
+    "status": "passed",
+    "commands": [
+      [
+        "g++",
+        "-std=c++17",
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-eb9sqv17\\main.cpp",
+        "-o",
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-eb9sqv17\\main.exe"
+      ],
+      [
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-eb9sqv17\\main.exe"
+      ]
+    ]
+  },
+  {
+    "language": "cpp",
+    "case": "palindrome",
+    "type": "trusted_reference_smoke",
+    "status": "passed",
+    "commands": [
+      [
+        "g++",
+        "-std=c++17",
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-j1aclpi5\\main.cpp",
+        "-o",
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-j1aclpi5\\main.exe"
+      ],
+      [
+        "C:\\Users\\35123\\AppData\\Local\\Temp\\codepilot-smoke-j1aclpi5\\main.exe"
+      ]
+    ]
+  }
+]

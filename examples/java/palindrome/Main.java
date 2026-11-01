@@ -1,0 +1,1 @@
+class Main { static boolean f(String s){s=s.toLowerCase().replaceAll("[^a-z0-9]","");return s.equals(new StringBuilder(s).reverse().toString());} public static void main(String[] args){if(!f("A man, a plan, a canal: Panama")||f("abc")||!f(""))throw new AssertionError();}}

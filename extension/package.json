@@ -1,0 +1,55 @@
+{
+  "name": "course-codepilot",
+  "displayName": "CodePilot 智能编程助手",
+  "description": "课程设计 32：上下文代码生成、审查、测试、文档与验证修复",
+  "version": "0.1.0",
+  "publisher": "course-project",
+  "license": "MIT",
+  "engines": { "vscode": "^1.90.0" },
+  "categories": ["Programming Languages", "Other"],
+  "main": "./out/extension.js",
+  "activationEvents": ["onView:codepilot.assistant", "onLanguage:python", "onLanguage:java", "onLanguage:javascript", "onLanguage:cpp"],
+  "capabilities": { "untrustedWorkspaces": { "supported": false } },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "test": "node --test test/*.test.cjs",
+    "package": "node ../scripts/package-extension.cjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.90.0",
+    "@vscode/test-electron": "^2.4.1",
+    "@vscode/vsce": "^3.2.0",
+    "typescript": "^5.6.0"
+  },
+  "contributes": {
+    "viewsContainers": { "activitybar": [{ "id": "codepilot", "title": "CodePilot", "icon": "media/icon.svg" }] },
+    "views": { "codepilot": [{ "type": "webview", "id": "codepilot.assistant", "name": "智能编程助手" }] },
+    "commands": [
+      { "command": "codepilot.open", "title": "CodePilot: 打开助手" },
+      { "command": "codepilot.generate", "title": "CodePilot: 生成代码" },
+      { "command": "codepilot.explain", "title": "CodePilot: 解释代码" },
+      { "command": "codepilot.review", "title": "CodePilot: 审查与优化" },
+      { "command": "codepilot.tests", "title": "CodePilot: 生成测试" },
+      { "command": "codepilot.docs", "title": "CodePilot: 生成 API 文档" },
+      { "command": "codepilot.fix", "title": "CodePilot: 诊断与修复" },
+      { "command": "codepilot.naming", "title": "CodePilot: 命名建议" },
+      { "command": "codepilot.suggest", "title": "CodePilot: 函数建议" },
+      { "command": "codepilot.complete", "title": "CodePilot: 请求代码补全" },
+      { "command": "codepilot.setToken", "title": "CodePilot: 设置后端令牌" }
+    ],
+    "menus": { "editor/context": [
+      { "command": "codepilot.review", "group": "codepilot@1", "when": "editorHasSelection" },
+      { "command": "codepilot.tests", "group": "codepilot@2", "when": "editorHasSelection" },
+      { "command": "codepilot.explain", "group": "codepilot@3", "when": "editorHasSelection" }
+    ] },
+    "configuration": {
+      "title": "CodePilot",
+      "properties": {
+        "codepilot.backendUrl": { "type": "string", "default": "http://127.0.0.1:8765", "description": "Python 后端地址。远程服务请使用 HTTPS。", "scope": "machine" },
+        "codepilot.inlineCompletion": { "type": "boolean", "default": false, "description": "自动请求云端行内补全；关闭时仍可通过命令手动请求。", "scope": "window" },
+        "codepilot.requestTimeoutSeconds": { "type": "number", "default": 120, "minimum": 5, "maximum": 600, "scope": "machine" }
+      }
+    }
+  }
+}
